@@ -119,18 +119,18 @@ margin-bottom: 100px;
     border-radius: 15px;
     margin: 15px 0 ;
  }
-.my-card .my-card__img-card-top {
+.my-card__img{
       border-radius: 5px;
       max-width: 100%;
       width: 250px;
       margin: auto;
 }
 
-.my-card .my-card__card-body {
+.my-card__body {
       padding: 5px;
       
 }
-.my-card .my-card__card-body .my-card__card-body__title{
+.my-card__title{
         text-align: center;
 }
 
