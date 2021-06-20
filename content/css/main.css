@@ -1,4 +1,24 @@
 /* START GENERIC COMPONENTS  */
+@font-face {
+    font-family:din-bold ;
+    src: url(fonts/ArbFONTS-DINNextLTArabic-Bold-2.ttf);
+}
+@font-face {
+    font-family: din-meduim;
+    src: url(fonts/ArbFONTS-DINNextLTArabic-Medium-2.ttf);
+}
+@font-face {
+    font-family: din-regular;
+    src: url(fonts/ArbFONTS-DINNextLTArabic-Regular-2.ttf);
+}
+@font-face {
+    font-family:bukra-bold ;
+    src: url(fonts/29ltbukrabold.otf);
+}
+@font-face {
+    font-family: bukra-regular;
+    src: url(fonts/29ltbukraregular.otf);
+}
 :root{
     --main-color-1:#051525;
     --main-color2:#d2a84c;
@@ -6,7 +26,7 @@
 }
 img{max-width: 100%;}
 body{
-    font-family:DIN Next LT Arabic , 29LT Bukra;
+    
     height: 3000px;
 } 
 a{
@@ -14,9 +34,9 @@ a{
 }
 .btn-check:focus+.btn, .btn:focus {box-shadow: none;}
 .navbar-toggler:focus{box-shadow: none;}
-  .navbar-light .navbar-toggler-icon {
+.navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
+}
 .button-white {
     color: var(--main-color3);
     border: 1px solid var(--main-color3);
@@ -24,7 +44,8 @@ a{
     border-radius: 15px;
     font-size: 16px;
     width: 180px;
-  }
+    font-family: din-meduim;
+}
 .button-white:hover{
     color: var(--main-color3);
     background-color: var(--main-color2);
@@ -39,11 +60,40 @@ a{
     font-size: 16px;
     width: 180px;
 
-  }
+}
 .button-gold:hover{
     color: var(--main-color3);
     background-color: var(--main-color2);
     transition: .5sec;
+}
+.my-card {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 15px;background-color: #fff;
+}
+.my-card__img {
+    border-radius: 5px;
+    max-width: 100%;
+    margin:25px  auto;
+
+}
+.my-card__body {
+    padding: 5px;
+    text-align: center;
+}
+.my-card__title{
+    margin-bottom: 15px;
+    font-family: din-bold;
+}
+.my-card__paragraph{
+    font-size: 14px;
+    font-family: din-regular;
+}
+.my-card__subtitle {
+    text-align: center;
 }
 /* END GENERIC COMPONENTS  */
 
@@ -57,6 +107,7 @@ a{
 .navbar .navbar-nav .nav-item .nav-link {
     color: var(--main-color3);
     position: relative;
+    font-family: din-meduim;
 }
 .navbar .navbar-nav .nav-item .nav-link.active {
     color: var(--main-color2);
@@ -79,24 +130,29 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 100vh;
+    height: 600px;
     background-color: rgb(0 0 0 / 62%);;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    margin-bottom: 100px;
-    
-    
+    margin-bottom: 100px;  
 }
 header h4 {
     color: var(--main-color3);
     font-weight: bold;
-    padding: 50px 0;
+    padding: 100px 0 25px;
+    font-family: bukra-bold;
+    margin: 0;
+}
+header h1 {
+    color: var(--main-color2);
+    font-family: bukra-bold;
 }
 header p {
     color: var(--main-color3);
     font-weight: bold;
     margin: 50px 0 ;
     z-index: 2;
+    font-family: din-meduim;
 }
 header .header__buttons {
     margin: 30px 0 ;
@@ -111,38 +167,99 @@ header .header__buttons .button-white {
 .about-us {
 margin-bottom: 100px;
 }
-.my-card {
+.about-us .about-us__head{
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.about-us .about-us__head h3 {
+    font-family: bukra-bold;
+}
+.about-us .about-us__main-paragraph {
+    font-family: din-regular;
+}
+.about-us .about-us__head img {
+    height: 40px;
+}
+.about-us .about-us__main-head {
+    margin-right: 25px;
+    
+}
+
+/* END ABOUT US  */
+/* START FEATURES */
+.features{
+    background-image:url(../../images/Group\ 1076.png);
+    background-size: contain;
+    margin-bottom: 100px;
+}
+.features .features__left-side-head {margin: 55px 0;}
+.features .features__left-side-head img {height: 40px;}
+.features .features__left-side-head h3 {
+    margin-right: 13px;
+    font-family: bukra-bold;
+}
+.features .features__main-paragraph{
+    font-family: din-regular;
+}
+
+.features .my-card__img {
+    width: 100px;
+    margin-bottom: 25px;
+}
+/* .features .my-card .my-card__card-body {
+
+} */
+/* .features .my-card .my-card__card-body .my-card__card-body__subtitle {
+
+ } */
+
+  /*# sourceMappingURL=main.css.map */
+
+/* END FEATURES */
+/* START OUR SERVICES  */
+.our-services {margin-bottom: 100px;}
+.our-services .navbar h3 {
+    font-family: bukra-bold;
+    margin-right: 25px;
+}
+.our-services .my-card {
     padding: 5px;
     margin: 5px;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     margin: 15px 0 ;
- }
-.my-card__img{
-      border-radius: 5px;
-      max-width: 100%;
-      width: 250px;
-      margin: auto;
+    border: 0;
+    background-color: #fff;
 }
+.our-services .my-card__img{
+    border-radius: 5px;
+    max-width: 100%;
+    width: 250px;
+    margin: auto;
+}
+.our-services .my-card__body {
+    padding: 5px;
 
-.my-card__body {
-      padding: 5px;
-      
 }
-.my-card__title{
+.our-services .my-card__title{
         text-align: center;
 }
-
-/* END ABOUT US  */
-/* START OUR SERVICES  */
-.our-services{
-
-}
-.our-services .our-services__btn-more {
+.our-services__btn-more {
     color: var(--main-color2);
+    font-family: bukra-regular;
 }
     /* END OUR SERVICES  */
+    /* START BLOG  */
+.blog {
+    margin-bottom: 100px;
+}
+.blog img {height: 40px;}
+.blog h3 {
+margin-right: 25px;
+font-family: bukra-bold;
+}
+    /* END BLOG  */
 
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
@@ -165,4 +282,23 @@ margin-bottom: 100px;
         display: flex;
         justify-content: space-evenly;
     }
-}    
+    .features .features__left-side-head h3 {
+        margin-right: 25px;
+    }  
+    .features .my-card {
+    border-radius: 70px 0 70px 0 ;
+    }  
+    .features .my-card--edit1{
+        margin-top: -160px;
+    }
+    .features .my-card--edit2{
+        margin-top: -100px;
+    }
+    .features .my-card--edit3{
+        margin-top: -10px;
+    }
+    .features .my-card--edit4{
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+}
