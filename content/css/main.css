@@ -25,10 +25,6 @@
     --main-color3:#fff;
 }
 img{max-width: 100%;}
-body{
-    
-    height: 30000px;
-} 
 a{
     text-decoration: none;
 }
@@ -99,6 +95,7 @@ a{
     flex-direction: row;
     align-items: baseline;
 }
+.image{height: 40px; margin-left: 25px;}
 /* END GENERIC COMPONENTS  */
 
 /* START NAV BAR  */
@@ -180,6 +177,7 @@ margin-bottom: 100px;
 }
 .about-us .about-us__main-paragraph {
     font-family: din-regular;
+    width: 80%;
 }
 .about-us .about-us__head img {
     height: 40px;
@@ -193,7 +191,7 @@ margin-bottom: 100px;
 /* START FEATURES */
 .features{
     background-image:url(../../images/Group\ 1076.png);
-    background-size: contain;
+    background-size: cover;
     margin-bottom: 100px;
 }
 .features .features__left-side-head {margin: 55px 0;}
@@ -210,15 +208,6 @@ margin-bottom: 100px;
     width: 100px;
     margin-bottom: 25px;
 }
-/* .features .my-card .my-card__card-body {
-
-} */
-/* .features .my-card .my-card__card-body .my-card__card-body__subtitle {
-
- } */
-
-  /*# sourceMappingURL=main.css.map */
-
 /* END FEATURES */
 /* START OUR SERVICES  */
 .our-services {margin-bottom: 100px;}
@@ -252,6 +241,7 @@ margin-bottom: 100px;
 .our-services__btn-more {
     color: var(--main-color2);
     font-family: bukra-regular;
+    font-weight: bold;
 }
     /* END OUR SERVICES  */
     /* START BLOG  */
@@ -264,14 +254,18 @@ margin-right: 25px;
 font-family: bukra-bold;
 }
 .blog .my-card {padding: 0; border: 0;}
+.blog .my-card__img {border-radius: 80px 0 80px 0;}
 .blog .my-card__body{text-align: start; padding: 10px;}
 .blog .my-card__link {
     text-decoration: underline;
-    color: var(--main-color2)
-    ;
+    color: var(--main-color2);
+    font-family: bukra-bold;
 }
 .swiper-container-android .swiper-slide, .swiper-wrapper {
 margin-bottom: 40px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    display: none;
 }
     /* END BLOG  */
     /* START CLIENTS OPOIONS */
@@ -279,8 +273,8 @@ margin-bottom: 40px;
         margin-bottom: 100px;
         background-image: url(../../images/Group\ 1077.png);
         background-repeat: no-repeat;
-        background-position-x: left;
-
+        background-position-x: 100px;
+        background-size: contain;
     }
     .client-oponion h3 {
         font-family: bukra-bold;
@@ -289,15 +283,33 @@ margin-bottom: 40px;
     .client-oponion .client-oponion__head-img{
         height: 40px;
     }
+    .client-oponion .owl-carousel .owl-item img{width: fit-content;}
+    .client-oponion .client-oponion__p-1{
+        color: var(--main-color2);
+        font-family: din-regular;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .client-oponion .client-oponion__p-2{
+        font-family: din-regular;
+    }
+    .client-oponion .client-oponion__p-3{
+        text-align: left;
+        font-family:din-bold ;
+        color: var(--main-color2);
+    }
+    .client-oponion .owl-nav{
+        position: absolute;
+        bottom: 35px;
+    }
     /* END CLIENTS OPOIONS */
     /* START CONTACT US  */
     .contact-us {
         margin-bottom: 100px ;
-
     }
     .contact-us .contact-us__head {
         justify-content: center;
-        margin-bottom: 50px;
+        margin-bottom: 80px;
     }
     .contact-us h3 {
         font-family: bukra-bold;
@@ -307,15 +319,20 @@ margin-bottom: 40px;
     .contact-us .contact-us__info {
         justify-content: space-evenly;
     }
-    .contact-us .contact-us__info i {
+    .contact-us .contact-us__info{
+        font-size: 18px;
+        font-weight: bold;
+        font-family:din-meduim ;
+    }
+    .contact-us .contact-us__info .svg-inline--fa {
         color: var(--main-color3);
-    width: 35px;
-    height: 35px;
-    background:var(--main-color2);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 35px;
-    margin-left: 15px;
+        width: 35px;
+        height: 35px;
+        background:var(--main-color2);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        margin-left: 15px;
     }
     .contact-us .contact-us__info a {color:black}
     /* END CONTACT US  */
@@ -339,14 +356,52 @@ margin-bottom: 40px;
         background-color: var(--main-color2);
         transition: .5s;
     }
+    footer .footer__social{margin: 15px 0 ;}
     footer .footer__social-p {
         color: var(--main-color3);
     }
     footer .footer__social-p span {
         color: var(--main-color2);
+        font-weight: bold;
+    }
+    footer hr {
+        color:var(--main-color3);
+    }
+    footer .footer__links{
+        display: flex;
+        justify-content: center;
+    }
+    footer .footer__links a {
+        font-family:  din-regular ;
+        margin-left: 30px;
+        color:var(--main-color3);
+        font-size: 22px;
+        margin: 30px 0 30px 30px ;
+    }
+    footer .footer__links a:hover{
+        color: var(--main-color2);
+        transition: .5s;
     }
     /* END FOOTER  */
 
+    /* START ABOUT US PAGE  */
+    .navbar--edit {
+        margin-bottom: 100px;
+    }
+    .about-us--page{margin-bottom: 100px;}
+    .about-us--page__image{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .about-us--page__image img {
+        border-radius: 0 80px 0 80px;
+    }
+
+    /* END  ABOUT US PAGE  */
+    /* START OUR SERVICES PAGE  */
+    
+    /* END OUR SERVICES PAGE  */
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
     .navbar .navbar-nav .nav-item .nav-link.active::after{
@@ -387,4 +442,14 @@ margin-bottom: 40px;
         margin-top: 100px;
         margin-bottom: 50px;
     }
+}
+@media only screen  and (max-width:768px) {
+    .contact-us__info{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-us__info a {
+        margin: 20px 0 ;
+    }
+    
 }
