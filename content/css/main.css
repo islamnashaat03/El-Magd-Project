@@ -19,6 +19,9 @@
     font-family: bukra-regular;
     src: url(fonts/29ltbukraregular.otf);
 }
+body{
+    overflow-x: hidden;
+}
 :root{
     --main-color-1:#051525;
     --main-color2:#d2a84c;
@@ -32,6 +35,19 @@ a{
 .navbar-toggler:focus{box-shadow: none;}
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.button-white2{
+    color: var(--main-color2);
+    border: 1px solid var(--main-color2);
+    padding: 12px ;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 180px;
+    font-family: din-meduim;
+}
+.button-white2:hover{
+    background-color: var(--main-color2);
+    color: var(--main-color3);
 }
 .button-white {
     color: var(--main-color3);
@@ -49,17 +65,18 @@ a{
     transition: .5sec;
 }
 .button-gold {
-    color: var(--main-color2);
+    color: var(--main-color3);
     border: 1px solid var(--main-color2);
     padding: 12px ;
     border-radius: 15px;
     font-size: 16px;
     width: 180px;
+    background-color: var(--main-color2);
 
 }
 .button-gold:hover{
-    color: var(--main-color3);
-    background-color: var(--main-color2);
+    color: var(--main-color2);
+    background-color: var(--main-color3);
     transition: .5sec;
 }
 .my-card {
@@ -93,9 +110,16 @@ a{
 .alligend {
     display: flex ;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
+
 }
 .image{height: 40px; margin-left: 25px;}
+.image-width{width: 75%;}
+.section__image{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
 /* END GENERIC COMPONENTS  */
 
 /* START NAV BAR  */
@@ -119,10 +143,6 @@ a{
     border-radius: 30px;
     padding: 12px 50px;
     margin-right: 30px;
-}
-.navbar .navbar__contact-btn:hover{
-    background-color: var(--main-color2);
-    transition: .5s ;
 }
 /* END NAV BAR  */
 /* START HEADER  */
@@ -326,12 +346,13 @@ margin-bottom: 40px;
     }
     .contact-us .contact-us__info .svg-inline--fa {
         color: var(--main-color3);
-        width: 35px;
-        height: 35px;
-        background:var(--main-color2);
+        width: 45px;
+        padding: 10px;
+        height: 45px;
+        background: var(--main-color2);
         border-radius: 50%;
         text-align: center;
-        line-height: 35px;
+        line-height: 40px;
         margin-left: 15px;
     }
     .contact-us .contact-us__info a {color:black}
@@ -343,14 +364,15 @@ margin-bottom: 40px;
         flex-direction: column;
         justify-content: center;
     }
-    footer .footer__social i {
+    footer .footer__social .svg-inline--fa {
         margin-right: 10px;
         background-color: var(--main-color3);
         color: var(--main-color-1);
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         line-height: 30px;
+        padding: 8px;
     }
     footer .footer__social a :hover{
         background-color: var(--main-color2);
@@ -397,11 +419,92 @@ margin-bottom: 40px;
     .about-us--page__image img {
         border-radius: 0 80px 0 80px;
     }
+    .our-services-page__head{
+        margin-bottom: 100px;
+        display: flex;
+    }
 
     /* END  ABOUT US PAGE  */
     /* START OUR SERVICES PAGE  */
-    
+    .our-services-page__title{
+        font-family:din-bold ;
+        font-size: 30px;
+    margin-bottom: 35px;
+    }
+    .our-services-page__brief{
+        font-family: din-regular;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    .postioning {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .form-control--edit {
+        border-radius: 80px;
+    }
+    .form-control--edit2{
+        resize: none;
+        border-radius: 25px;
+    }
+    .modal-footer--edit{
+        border-top: none;
+        display: inline-block;
+    }
+    .modal-header{
+        border-bottom: none;
+        display: inline;
+    }
+    .modal-header .svg-inline--fa {
+        font-size: 35px;
+        color:var(--main-color2);
+    }
+    .modal-header .btn-close--edit{
+        margin-bottom: 15px;
+        border:2px solid var(--main-color2);
+        border-radius: 50%;
+        color: var(--main-color2);
+    }
+    .modal-header .modal-header__title{
+        display: flex;
+        justify-content: center;
+    }
+    .our-services-page .service-type2{text-align: right;margin-bottom: 200px;}
+    .our-services-page .service-type{
+        text-align: left;
+        margin-bottom: 200px;
+        
+    }
+    .erorr-404{
+        text-align: center;
+        margin: 100px auto;
+    }
+    .erorr-404 h3 {
+        font-size: 85px;
+        font-weight: bold;
+        font-family: bukra-bold;
+        color: #707070;
+        margin: 30px auto;
+    }
+    .erorr-404 p {
+        font-size: 30px; 
+        font-family: bukra-regular;
+        color: #707070;
+    }
     /* END OUR SERVICES PAGE  */
+    /* START BLOG PAGE  */
+    .blog-page {
+
+    }
+    .blog-page .my-card{
+        border: 0;
+    }
+    .blog-page .my-card .my-card__img {
+        border-radius: 80px 0 ;
+    }
+    /* END BLOG PAGE  */
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
     .navbar .navbar-nav .nav-item .nav-link.active::after{
@@ -441,6 +544,20 @@ margin-bottom: 40px;
     .features .my-card--edit4{
         margin-top: 100px;
         margin-bottom: 50px;
+    }
+    .moddal-content--edit{
+        width: 800px;
+        padding: 65px;
+    }
+    .form-control--edit{
+        margin: 50px 0 ;
+        height: 70px;
+        font-size: 25px;
+        padding: 26px;
+    }
+    .form-control--edit2{
+        padding: 25px;
+        font-size: 25px;
     }
 }
 @media only screen  and (max-width:768px) {
