@@ -333,15 +333,15 @@ margin-bottom: 40px;
         margin-right: 25px;
     }
     .contact-us .contact-us__img {height: 40px;}
-    .contact-us .contact-us__info {
+    .contact-us__info {
         justify-content: space-evenly;
     }
-    .contact-us .contact-us__info{
+    .contact-us__info{
         font-size: 18px;
         font-weight: bold;
         font-family:din-meduim ;
     }
-    .contact-us .contact-us__info .svg-inline--fa {
+    .contact-us__info .svg-inline--fa {
         color: var(--main-color3);
         width: 45px;
         padding: 10px;
@@ -352,7 +352,7 @@ margin-bottom: 40px;
         line-height: 40px;
         margin-left: 15px;
     }
-    .contact-us .contact-us__info a {color:black}
+    .contact-us__info a {color:black}
     /* END CONTACT US  */
     /* START FOOTER  */
     footer{
@@ -491,9 +491,6 @@ margin-bottom: 40px;
     }
     /* END OUR SERVICES PAGE  */
     /* START BLOG PAGE  */
-    .blog-page {
-
-    }
     .blog-page .my-card{
         border: 0;
     }
@@ -539,6 +536,44 @@ margin-bottom: 40px;
         font-family: din-regular;
     }
     /* END PRIVACY POLICY PAGE  */
+    /* START CONTACT US PAGE   */
+    .contact-us-page .my-form{
+        border: 2px solid #EFF2F1;
+        background-color: #EFF2F1;
+        width: 380px;
+        border-radius: 0 30px;
+        margin: 15px 0;
+        position: absolute;
+        top: -40px;
+        left: 100px;
+        padding: 25px;
+    }
+    .contact-us-page .my-form .form-group {margin: 25px 0 ;}
+    .contact-us-page .my-form .form-group input {
+        width: 100%;
+        border-radius: 20px;
+        padding: 8px;
+        text-indent: 15px;
+        border:  0;
+    }
+    .contact-us-page .my-form .form-group input:focus-visible{outline: none;}
+    .contact-us-page .my-form .form-group textarea {
+        width: 100%;
+        resize: none;
+        border: 0;
+        border-radius: 15px;
+    }
+    .contact-us-page .my-form .form-group ::placeholder{color: #D2D2D2;}
+    .contact-us-page .my-form  .button-gold {
+        padding: 5px;
+    }
+    .contact-us-page .map {
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .contact-us-page .contact-us__info {margin: 30px 0 ;}
+
+    /* END CONTACT US PAGE   */
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
     .navbar .navbar-nav .nav-item .nav-link.active::after{
