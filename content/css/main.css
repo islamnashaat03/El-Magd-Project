@@ -555,8 +555,9 @@ margin-bottom: 40px;
         padding: 8px;
         text-indent: 15px;
         border:  0;
+        outline: none;
     }
-    .contact-us-page .my-form .form-group input:focus-visible{outline: none;}
+    .contact-us-page .my-form .form-group input{outline: none;}
     .contact-us-page .my-form .form-group textarea {
         width: 100%;
         resize: none;
@@ -574,6 +575,27 @@ margin-bottom: 40px;
     .contact-us-page .contact-us__info {margin: 30px 0 ;}
 
     /* END CONTACT US PAGE   */
+    /* START SERVICES-1 PAGE  */
+    .services-1 {margin-top: 100px;}
+    .services-1 h3 {font-family: din-bold;margin-bottom: 50px;}
+    .services-1 .form-group { position: relative;}
+    .services-1 input{
+        width: 75%;
+        font-weight: bold;
+        outline: 0;
+        padding: 10px 45px;
+        border-radius: 15px;
+        border: 1px solid #F3F3F3;
+        background-color: #F3F3F3;
+    }
+    .services-1 .services-1-btn {
+        position: absolute;
+        right: 13%;
+        border: 0;
+        background: none;
+        top:21%
+    }
+    /* END SERVICES-1 PAGE  */
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
     .navbar .navbar-nav .nav-item .nav-link.active::after{
