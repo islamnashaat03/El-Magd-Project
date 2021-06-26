@@ -595,6 +595,8 @@ margin-bottom: 40px;
         background: none;
         top:21%
     }
+    .accordion-header button { color: var(--main-color2);}
+    .accordion-button:not(.collapsed){color: var(--main-color2);}
     /* END SERVICES-1 PAGE  */
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
