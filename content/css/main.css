@@ -525,6 +525,20 @@ margin-bottom: 40px;
         color: var(--main-color3);
     }
     /* END BLOG PAGE  */
+    /* START PRIVACY POLICY PAGE  */
+    .privacy h3 {margin : 50px 0;font-family: din-regular;}
+    .privacy .privacy-offers h4  {
+        margin: 50px 0;
+        color: var(--main-color2);
+        font-family: din-meduim;
+    }
+    .privacy  p {
+        font-family: din-regular;
+    }
+    .privacy ul li {
+        font-family: din-regular;
+    }
+    /* END PRIVACY POLICY PAGE  */
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
     .navbar .navbar-nav .nav-item .nav-link.active::after{
