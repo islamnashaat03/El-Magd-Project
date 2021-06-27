@@ -316,7 +316,32 @@ margin-bottom: 40px;
     }
     .client-oponion .owl-nav{
         position: absolute;
-        bottom: 35px;
+        bottom: 15px;
+    }
+    .client-oponion button .svg-inline--fa {
+        font-size: 0px;
+        color: #C1BCBC;
+        background-color: #fff;
+        stroke-width: 17px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #C1BCBC;
+        padding: 6px;
+    }
+    .client-oponion button .svg-inline--fa:hover{
+        border: 1px solid var(--main-color2);
+        color: var(--main-color2);
+    }
+    .owl-carousel .owl-nav:focus{
+        border: 1px solid var(--main-color2);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        color: var(--main-color2);
+    }
+    .client-oponion .owl-prev {
+        margin-left: 25px;
     }
     .client-oponion .client-oponion__img{width: 80%;}
     /* END CLIENTS OPOIONS */
