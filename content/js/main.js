@@ -1,5 +1,4 @@
-
-    var swiper = new Swiper(".mySwiper ", {
+var swiper = new Swiper(".mySwiper ", {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
@@ -25,6 +24,7 @@
       },
     },
   });
+
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:50,
@@ -46,5 +46,5 @@
             loop:false
         }
     }
-})
+});
 
