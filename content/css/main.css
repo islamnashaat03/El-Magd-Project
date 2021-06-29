@@ -287,6 +287,15 @@ margin-bottom: 40px;
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
     display: none;
 }
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after{
+    color: var(--main-color3);
+    background-color: var(--main-color2);
+    padding: 30%;
+    border-radius: 15px;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    top: 30%;
+}
     /* END BLOG  */
     /* START CLIENTS OPOIONS */
     .client-oponion{
@@ -400,7 +409,7 @@ margin-bottom: 40px;
         background-color: var(--main-color2);
         transition: .5s;
     }
-    footer .footer__social{margin: 15px 0 ;}
+    footer .footer__social{margin:10px;}
     footer .footer__social-p {
         color: var(--main-color3);
     }
@@ -417,10 +426,9 @@ margin-bottom: 40px;
     }
     footer .footer__links a {
         font-family:  din-regular ;
-        margin-left: 30px;
+        margin: 10px;
         color:var(--main-color3);
         font-size: 22px;
-        margin: 30px 0 30px 30px ;
     }
     footer .footer__links a:hover{
         color: var(--main-color2);
@@ -623,8 +631,31 @@ margin-bottom: 40px;
         background: none;
         top:21%
     }
-    .accordion-header button { color: var(--main-color2);}
+    .accordion-item{
+        padding: 25px 0 ;
+        background-color: #e7f1ff;
+        margin-bottom: 30px;
+    }
+    .accordion-header button {
+        color: var(--main-color2);
+        font-family: din-meduim;
+        padding: 15px;
+        font-size: 25px;
+        background-color:  #e7f1ff;
+    }
+    .accordion-header button:focus{
+        box-shadow: none;
+
+    }
+    .accordion-button::after{
+        background-image: url(../../images/Path\ 578.svg);
+        margin-left: 0;
+        margin-right: auto;
+    }
     .accordion-button:not(.collapsed){color: var(--main-color2);}
+    .accordion-button:not(.collapsed)::after{
+        background-image: url(../../images/Path\ 576.svg);
+    }
     /* END SERVICES-1 PAGE  */
 /* START MEDIA QUIERRIES */ 
 @media only screen and (min-width:992px) {
@@ -681,13 +712,16 @@ margin-bottom: 40px;
         font-size: 25px;
     }
 }
-@media only screen  and (max-width:768px) {
+@media only screen  and (max-width:767px) {
     .contact-us__info{
         flex-direction: column;
         align-items: center;
     }
     .contact-us__info a {
         margin: 20px 0 ;
+    }
+    footer .footer__links a {
+        font-size: 12px;
     }
     
 }
