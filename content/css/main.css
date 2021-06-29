@@ -281,6 +281,7 @@ font-family: bukra-bold;
     color: var(--main-color2);
     font-family: bukra-bold;
 }
+.blog .swiper-wrapper .swiper-slide .my-card{width: 85%;}
 .swiper-container-android .swiper-slide, .swiper-wrapper {
 margin-bottom: 40px;
 }
@@ -295,6 +296,7 @@ margin-bottom: 40px;
 }
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
     top: 30%;
+    left: 35px;
 }
     /* END BLOG  */
     /* START CLIENTS OPOIONS */
@@ -715,7 +717,6 @@ margin-bottom: 40px;
 @media only screen  and (max-width:767px) {
     .contact-us__info{
         flex-direction: column;
-        align-items: center;
     }
     .contact-us__info a {
         margin: 20px 0 ;
