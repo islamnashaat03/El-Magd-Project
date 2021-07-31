@@ -581,10 +581,7 @@ margin-bottom: 40px;
         width: 380px;
         border-radius: 0 30px;
         margin: 15px 0;
-        position: absolute;
-        top: -40px;
-        left: 100px;
-        padding: 25px;
+        max-width: 100%;
     }
     .contact-us-page .my-form .form-group {margin: 25px 0 ;}
     .contact-us-page .my-form .form-group input {
@@ -712,6 +709,12 @@ margin-bottom: 40px;
     .form-control--edit2{
         padding: 25px;
         font-size: 25px;
+    }
+    .contact-us-page .my-form{
+        position: absolute;
+        top: -40px;
+        left: 100px;
+        padding: 25px;
     }
 }
 @media only screen  and (max-width:767px) {
