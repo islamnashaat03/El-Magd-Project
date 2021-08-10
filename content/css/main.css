@@ -62,7 +62,7 @@ a{
     color: var(--main-color3);
     background-color: var(--main-color2);
     border-color: var(--main-color2);
-    transition: .5sec;
+    transition: .5s;
 }
 .button-gold {
     color: var(--main-color3);
@@ -77,7 +77,7 @@ a{
 .button-gold:hover{
     color: var(--main-color2);
     background-color: var(--main-color3);
-    transition: .5sec;
+    transition: .5s;
 }
 .my-card {
     padding: 10px;
