@@ -466,6 +466,12 @@ margin-bottom: 40px;
         font-size: 30px;
     margin-bottom: 35px;
     }
+    .our-services-page .services__rows-wrapper .services__row--edit:nth-of-type(odd){
+        direction: rtl;
+    }
+    .our-services-page .services__rows-wrapper .services__row--edit:nth-of-type(even){
+        direction: ltr;
+    }
     .our-services-page__brief{
         font-family: din-regular;
         font-size: 20px;
@@ -506,10 +512,9 @@ margin-bottom: 40px;
         display: flex;
         justify-content: center;
     }
-    .our-services-page .service-type2{text-align: right;margin-bottom: 200px;}
     .our-services-page .service-type{
-        text-align: left;
-        margin-bottom: 200px;   
+        text-align: center;
+        margin-bottom: 80px;   
     }
     .erorr-404{
         text-align: center;
