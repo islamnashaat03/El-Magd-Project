@@ -74,11 +74,7 @@ a {
 .navbar-toggler:focus {
   box-shadow: none;
 }
-
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
+.navbar-light .navbar-toggler{border: 0;}
 .button-white2 {
   color: var(--main-color2);
   border: 1px solid var(--main-color2);
@@ -219,6 +215,81 @@ a {
 }
 
 /* END NAV BAR  */
+
+/* START NAVBAR ANIMATION */
+.navbar .navbar-toggler .hamburger-box {
+  position: relative;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  transition:
+    300ms -webkit-transform cubic-bezier(.4, 0, .2, 1),
+    300ms transform cubic-bezier(.4, 0, .2, 1);
+}
+.navbar .navbar-toggler .hamburger-box.open {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.navbar .navbar-toggler .hamburger-box .hamburger-inner,
+.navbar .navbar-toggler .hamburger-box .hamburger-inner:before,
+.navbar .navbar-toggler .hamburger-box .hamburger-inner:after {
+  position: absolute;
+  background-color: #aaa;
+  height: 2px;
+}
+.navbar .navbar-toggler .hamburger-box:hover .hamburger-inner,
+.navbar .navbar-toggler .hamburger-box:hover .hamburger-inner:before,
+.navbar .navbar-toggler .hamburger-box:hover .hamburger-inner:after,
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner,
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner:before,
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner:after {
+  background-color: var(--main-color2);
+}
+.navbar .navbar-toggler .hamburger-box .hamburger-inner {
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: background-color cubic-bezier(.4, 0, .2, 1);
+  transition-duration: 100ms;
+}
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner {
+  background-color: transparent;
+  transition-delay: 100ms;
+  transition-duration: 300ms;
+}
+.navbar .navbar-toggler .hamburger-box .hamburger-inner:before,
+.navbar .navbar-toggler .hamburger-box .hamburger-inner:after {
+  content: '';
+  left: 0;
+  width: 75%;
+  transition:
+    100ms background-color cubic-bezier(.4, 0, .2, 1),
+    150ms width cubic-bezier(.4, 0, .2, 1),
+    300ms -webkit-transform cubic-bezier(.4, 0, .2, 1),
+    300ms transform cubic-bezier(.4, 0, .2, 1);
+}
+.navbar .navbar-toggler .hamburger-box .hamburger-inner:before {
+  top: -10px;
+  transform-origin: right;
+}
+.navbar .navbar-toggler .hamburger-box .hamburger-inner:after {
+  bottom: -10px;
+  transform-origin: right;
+}
+.navbar .navbar-toggler .hamburger-box:hover .hamburger-inner:before,
+.navbar .navbar-toggler .hamburger-box:hover .hamburger-inner:after,
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner:before,
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner:after {
+  width: 100%;
+}
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner:before {
+  transform: rotate(-45deg) translate(-3px, -3px);
+}
+.navbar .navbar-toggler .hamburger-box.open .hamburger-inner:after {
+  transform: rotate(45deg) translate(-3px, 3px);
+}
+/* END NAVBAR ANIMATION */
 /* START HEADER  */
 header {
   background-image: url(../../images/blue-mosque-istanbul-turkey@2x.png);
