@@ -31,13 +31,13 @@
   width: 100%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  transition: background-color cubic-bezier(.4, 0, .2, 1);
-  transition-duration: 100ms;
+  /* transition: background-color cubic-bezier(.4, 0, .2, 1); */
+  /* transition-duration: 100ms; */
 }
 .navbar .navbar-toggler .hamburger-box.open .hamburger-inner {
   background-color: transparent;
-  transition-delay: 100ms;
-  transition-duration: 300ms;
+  /* transition-delay: 100ms; */
+  /* transition-duration: 300ms; */
 }
 .navbar .navbar-toggler .hamburger-box .hamburger-inner:before,
 .navbar .navbar-toggler .hamburger-box .hamburger-inner:after {
